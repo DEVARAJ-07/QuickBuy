@@ -1,0 +1,44 @@
+.products-page { padding: 2rem 0 4rem }
+.prod-page-head { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:2rem; flex-wrap:wrap; gap:1rem }
+.prod-head-actions { display:flex; gap:.75rem; align-items:center }
+.prod-sort { width:200px; padding:.5rem .875rem }
+.prod-layout { display:grid; grid-template-columns:260px 1fr; gap:2rem; align-items:start }
+
+/* Sidebar */
+.prod-sidebar {
+  background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);
+  padding:1.25rem; position:sticky; top:calc(var(--nav-h) + 1rem);
+  display:flex; flex-direction:column; gap:1.25rem;
+}
+.sidebar-head { display:flex; justify-content:space-between; align-items:center }
+.sidebar-head h3 { font-weight:800; color:var(--text) }
+.sidebar-close { display:none; color:var(--text-2) }
+.filter-group { display:flex; flex-direction:column; gap:.5rem }
+.filter-label { font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-3) }
+.filter-cats { display:flex; flex-wrap:wrap; gap:.4rem }
+.fcat {
+  padding:.3rem .75rem; border-radius:100px; font-size:.78rem; font-weight:600;
+  border:1.5px solid var(--border); color:var(--text-2); transition:var(--ease);
+}
+.fcat:hover, .fcat.active { border-color:var(--primary); color:var(--primary); background:rgba(26,58,107,.06) }
+
+/* Pagination */
+.pagination { display:flex; align-items:center; justify-content:center; gap:.75rem; margin-top:2.5rem }
+.page-nums { display:flex; gap:.4rem }
+.page-num {
+  width:36px; height:36px; border-radius:var(--radius-sm); border:1.5px solid var(--border);
+  font-weight:600; font-size:.875rem; color:var(--text-2); transition:var(--ease);
+}
+.page-num.active { border-color:var(--primary); background:var(--primary); color:#fff }
+.page-num:hover:not(.active) { border-color:var(--primary); color:var(--primary) }
+
+@media (max-width:900px) {
+  .prod-layout { grid-template-columns:1fr }
+  .prod-sidebar {
+    position:fixed; top:0; left:0; bottom:0; width:280px; z-index:500;
+    transform:translateX(-100%); transition:transform .3s; overflow-y:auto;
+    border-radius:0; box-shadow:var(--shadow-xl);
+  }
+  .prod-sidebar.open { transform:translateX(0) }
+  .sidebar-close { display:flex }
+}

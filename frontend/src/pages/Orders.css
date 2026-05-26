@@ -1,0 +1,36 @@
+.orders-page { padding:2rem 0 5rem }
+.orders-list { display:flex;flex-direction:column;gap:1.25rem }
+.order-card { background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--ease) }
+.order-card:hover { box-shadow:var(--shadow) }
+.order-header { padding:1.25rem 1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem }
+.order-meta { display:flex;align-items:center;gap:1.5rem;flex:1;flex-wrap:wrap }
+.order-num { font-weight:800;color:var(--text);font-size:.95rem }
+.order-date { font-size:.75rem;color:var(--text-3);margin-top:.2rem }
+.order-pay-method { font-size:.8rem;font-weight:600;color:var(--text-2) }
+.order-total { font-size:1rem;font-weight:800;color:var(--primary);margin-left:auto }
+.order-header-right { display:flex;align-items:center;gap:1rem;color:var(--text-3) }
+.order-preview-imgs { display:flex;gap:.375rem }
+.order-preview-img { width:40px;height:40px;border-radius:var(--radius-sm);object-fit:contain;background:var(--bg);border:1px solid var(--border);padding:3px }
+
+/* Body */
+.order-body { border-top:1px solid var(--border);padding:1.5rem;display:flex;flex-direction:column;gap:1.5rem;animation:fadeUp .3s ease }
+.order-items { display:flex;flex-direction:column;gap:.875rem }
+.order-item { display:flex;align-items:center;gap:1rem;background:var(--bg);border-radius:var(--radius-sm);padding:.875rem }
+.oi-img { width:60px;height:60px;border-radius:var(--radius-sm);object-fit:contain;background:#fff;border:1px solid var(--border);padding:4px;flex-shrink:0 }
+.oi-info { flex:1 }
+.oi-title { font-weight:600;font-size:.9rem;color:var(--text) }
+.oi-qty { font-size:.78rem;color:var(--text-3);margin-top:.2rem }
+.oi-total { font-weight:700;color:var(--primary) }
+
+.order-detail-grid { display:grid;grid-template-columns:1fr 1fr;gap:1.5rem }
+.order-address h4,.order-totals h4 { font-weight:700;color:var(--text);margin-bottom:.875rem }
+.order-address p { font-size:.875rem;color:var(--text-2);margin-bottom:.25rem }
+.ot-row { display:flex;justify-content:space-between;font-size:.875rem;color:var(--text-2);padding:.35rem 0 }
+.ot-row.total { font-weight:800;font-size:1rem;color:var(--text);border-top:1px solid var(--border);padding-top:.75rem;margin-top:.375rem }
+
+.order-actions { display:flex;gap:.875rem;flex-wrap:wrap }
+
+@media (max-width:768px) {
+  .order-meta { gap:1rem }
+  .order-detail-grid { grid-template-columns:1fr }
+}
